@@ -9,16 +9,19 @@ public class HelloStrangers {
         //Then reads stranger names line by line and prints line by line "Hello, ...".
         Scanner sc = new Scanner(System.in);
         int n=sc.nextInt();
-        if(n==0){
+        String name ;
+
+       if(n==0){
             System.out.print("Oh, it looks like there is no one here");
         } else if (n<0) {
             System.out.print("Seriously? Why so negative?");
         }
         else{
-            for(int i=0;i<n;i++){
-                String name=sc.nextLine();
-                System.out.print("Hello, "+name);
-            }
+            sc.nextLine();//clear the buffer
+           for(int i=0;i<n;i++){
+               name= sc.nextLine();
+               System.out.println("Hello, "+name);
+           }
         }
     }
 }
